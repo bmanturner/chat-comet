@@ -1,0 +1,43 @@
+<template name="Home">
+	{{#if currentUser}}
+		<p>Welcome back, <strong>{{username}}</strong></p>
+		<a href="{{pathFor route='chatrooms'}}">View Chatrooms</a><!-- will change to automatic redirect-->
+	{{else}}
+		{{> loginButtons}}<!--look for bootstrap account package-->
+	{{/if}}
+</template>
+
+
+<template name="Chatselection">
+	<ul class="list-group">
+		{{#each chatrooms}}
+			<li class="list-group-item">
+				<a href="{{pathFor route='chatroom'}}" title="{{name}}">{{name}}</a>
+			</li>
+		{{/each}}
+	</ul>
+	<hr />
+	<form class="new-chatroom">
+		<div class="form-group">
+        	<input class="form-control" type="text" name="text" placeholder="Create a new chatroom" />
+        </div>
+    </form>
+</template>
+
+
+<template name="Chatroom">
+	<ul class="list-group">
+		{{#each messages}}
+			<li class="list-group-item">
+				<strong>{{user}}</strong> - {{message}}
+			</li>
+		{{/each}}
+	</ul>
+	<hr />
+	<form class="new-message">
+		<div class="form-group">
+			<input type="hidden" name="roomID" value="{{roomID}}">
+        	<input class="form-control" type="text" name="text" placeholder="Type your message here" />
+        </div>
+    </form>
+</template>

@@ -8,3 +8,5 @@ iron:router
 mizzao:bootstrap-3
 accounts-ui
 accounts-password
+fuatsengul:iron-router-auth
+

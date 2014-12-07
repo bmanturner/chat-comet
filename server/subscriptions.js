@@ -10,8 +10,8 @@ Chatrooms.allow({
 });
 
 // Messages publishing and persmissions
-Meteor.publish('chatMessages', function(roomID) {
-	return Messages.find({ chatroom : roomID});
+Meteor.publish('chatMessages', function() {
+	return Messages.find();
 });
 
 Messages.allow({

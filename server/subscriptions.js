@@ -1,17 +1,7 @@
-// Chatrooms publishing and permissions
-Meteor.publish('allChatrooms', function () {
-	return Chatrooms.find();
-});
-
-Chatrooms.allow({
-	'insert' : function () {
-		return true;
-	}
-});
-
 // Messages publishing and persmissions
 Meteor.publish('chatMessages', function() {
-	return Messages.find();
+	var timestamp = new Date();
+	return Messages.find({ creation_date: {$gte: timestamp} });
 });
 
 Messages.allow({

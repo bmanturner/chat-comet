@@ -10,7 +10,7 @@ Template.Chatroom.events({
 		});
 		event.target.text.value = "";
 		var $chat = $('#chat-messages');
-		$chat.animate({ scrollTop: $chat[0].scrollHeight}, 200);
+		$chat.animate({scrollTop: $chat[0].scrollHeight}, 200);
 		return false;
 	}
 });

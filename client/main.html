@@ -9,24 +9,35 @@
 
 
 <template name="Chatroom">
-	<ul class="list-group">
-		{{#each users}}
-			<li class="list-group-item">
-				<strong>{{username}}</strong>
-			</li>
-		{{/each}}
-	</ul>
-	<hr />
-	<div id="chat-messages" style="height: 65vh; overflow-y: auto; word-wrap: break-word;">
-		<ul class="list-group">
-			{{#each messages}}
-				<li class="list-group-item">
-					<strong>{{user}}</strong> - {{message}}
-				</li>
-			{{/each}}
-		</ul>
-	</div>
-	<footer class="footer">
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="panel panel-primary" style="max-height: 65vh; overflow-y: auto;">
+				<div class="panel-heading">Online Users (#)</div>
+				<ul class="list-group">
+					{{#each users}}
+						<li class="list-group-item">
+							<strong>{{username}}</strong>
+						</li>
+					{{/each}}
+				</ul>	
+			</div>	
+		</div>
+		<div class="col-sm-9">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Welcome to Chat Comet!</div>
+				<div id="chat-messages" style="height: 65vh; overflow-y: auto; word-wrap: break-word;">
+					<ul class="list-group">
+						{{#each messages}}
+							<li class="list-group-item">
+								<strong>{{user}}</strong> - {{message}}
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<footer class="footer" style="padding-top: 5px;">
 		<form class="new-message">
 			<div class="input-group">
 				<input class="form-control" type="text" name="text" placeholder="Type your message here" />

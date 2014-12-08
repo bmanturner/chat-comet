@@ -6,9 +6,9 @@
 meteor-platform
 iron:router
 mizzao:bootstrap-3
-accounts-ui
 accounts-password
 fuatsengul:iron-router-auth
 mizzao:user-status
 jquery
+rajit:accounts-ui-bootstrap-3
 

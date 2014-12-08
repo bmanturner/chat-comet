@@ -17,17 +17,23 @@
 		{{/each}}
 	</ul>
 	<hr />
-	<ul class="list-group">
-		{{#each messages}}
-			<li class="list-group-item">
-				<strong>{{user}}</strong> - {{message}}
-			</li>
-		{{/each}}
-	</ul>
-	<hr />
-	<form class="new-message">
-		<div class="form-group">
-        	<input class="form-control" type="text" name="text" placeholder="Type your message here" />
-        </div>
-    </form>
+	<div id="chat-messages" style="height: 65vh; overflow-y: auto; word-wrap: break-word;">
+		<ul class="list-group">
+			{{#each messages}}
+				<li class="list-group-item">
+					<strong>{{user}}</strong> - {{message}}
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+	<footer class="footer">
+		<form class="new-message">
+			<div class="input-group">
+				<input class="form-control" type="text" name="text" placeholder="Type your message here" />
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-primary">Send</button>
+				</span>
+			</div>
+		</form>
+    </footer>   
 </template>

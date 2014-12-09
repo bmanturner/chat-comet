@@ -35,7 +35,7 @@
 				<div id="chat-messages" style="height: 63vh; overflow-y: auto; word-wrap: break-word;">
 					<ul class="list-group" style="margin-bottom: 0;">
 						{{#each messages}}
-							<li class="list-group-item">
+							<li class="list-group-item {{msgEvent}}">
 								<h6 class="list-group-item-heading"><strong>{{user}} &raquo;</strong> {{message}}</h6>
     						</li>
 						{{/each}}

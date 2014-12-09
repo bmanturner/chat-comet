@@ -1,14 +1,28 @@
 <template name="Header">
 	<head>
 		<title>Comet Chat - meteor.js chatroom</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 	</head>
 	<body>
-		<div class="container">
-			<div class="header">
-				<h2 class="text-center">Chat Comet!</h2>
+		<div class="container" style="padding-top: 20px;">
+			<div class="navbar navbar-inverse">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+	                	<span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+					<a class="navbar-brand" href="{{pathFor route='home'}}">Chat Comet!</a>
+				</div>
+				<div class="navbar-collapse collapse navbar-inverse-collapse">
+                  	<ul class="nav navbar-nav navbar-right">
+                  		<li><a href="https://github.com/brendanfturner/chat-comet">Github!</a></li>
+                    	{{> loginButtons }}
+                  	</ul>
+                </div>
 			</div>
+
 			{{> yield}}
 		</div>
 	</body>
-	
 </template>

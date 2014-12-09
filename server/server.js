@@ -4,6 +4,8 @@ Meteor.startup(function () {
 
 Meteor.methods({
 	addMessage: function (username, usermessage) {
+		check(username, String);
+		check(usermessage, String);
 		Messages.insert({
 			userID: this.userId,
 			user: username,

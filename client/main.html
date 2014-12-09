@@ -20,7 +20,7 @@
 		<div class="col-sm-3 col-sm-push-9">
 			<div class="panel panel-primary" style="max-height: 63vh; overflow-y: auto;">
 				<div class="panel-heading"><strong>Online Users</strong><span class="badge pull-right" >{{usercount}}</span></div>
-				<ul class="list-group">
+				<ul class="list-group" style="margin-bottom: 0;">
 					{{#each users}}
 						<li class="list-group-item">
 							<strong>{{username}}</strong>
@@ -33,7 +33,7 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading"><strong>Welcome to Chat Comet!</strong></div>
 				<div id="chat-messages" style="height: 63vh; overflow-y: auto; word-wrap: break-word;">
-					<ul class="list-group">
+					<ul class="list-group" style="margin-bottom: 0;">
 						{{#each messages}}
 							<li class="list-group-item">
 								<h6 class="list-group-item-heading"><strong>{{user}} &raquo;</strong> {{message}}</h6>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</div>	
-	<footer class="footer" style="padding-top: 5px;">
+	<footer class="footer" style="padding-bottom: 5px;">
 		<form class="new-message">
 			<div class="row">
 				<div class="col-sm-9">
